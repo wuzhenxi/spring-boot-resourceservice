@@ -32,16 +32,16 @@ import java.security.cert.X509Certificate;
 @Slf4j
 public class RestClientConfig {
 
-    @Bean
-    @LoadBalanced
+//    @Bean
+//    @LoadBalanced
     public RestTemplate restTemplate() {
         RestTemplate restTemplate = new RestTemplate();
-        restTemplate.setRequestFactory(clientHttpRequestFactory());
-        restTemplate.setErrorHandler(new DefaultResponseErrorHandler());
+//        restTemplate.setRequestFactory(clientHttpRequestFactory());
+//        restTemplate.setErrorHandler(new DefaultResponseErrorHandler());
         return restTemplate;
     }
 
-    @Bean
+//    @Bean
     public HttpComponentsClientHttpRequestFactory clientHttpRequestFactory() {
         try {
             HttpClientBuilder httpClientBuilder = HttpClientBuilder.create();
